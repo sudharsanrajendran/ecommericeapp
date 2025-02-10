@@ -49,9 +49,9 @@ class _CategoriesState extends State<Categories> {
                     child: CircleAvatar(
                       radius: 30, // Adjust size as needed
                       backgroundColor: dark ? Colors.black : Colors.white,
-                      backgroundImage: category['thumbnail'] != null
-                          ? NetworkImage(category['thumbnail'])
-                          : null, // Prevents error if thumbnail is null
+//backgroundImage: category['thumbnail'] != null
+                        //  ? NetworkImage(category['thumbnail'])
+                         // : null, // Prevents error if thumbnail is null
                       child: category['thumbnail'] == null
                           ? const Icon(Icons.image_not_supported, size: 30)
                           : null, // Shows icon if no image

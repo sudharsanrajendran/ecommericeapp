@@ -80,7 +80,7 @@ class _SliderWithIndicatorState extends State<SliderWithIndicator> {
                     );
                   },
                   options: CarouselOptions(
-                    autoPlay: true,
+                    autoPlay: false,
                     autoPlayAnimationDuration: const Duration(seconds: 3),
                     autoPlayInterval: const Duration(seconds: 3),
                     enlargeCenterPage: true, // Highlight the center item

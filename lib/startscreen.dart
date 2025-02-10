@@ -1,3 +1,4 @@
+import 'package:ecommericeapp/bottom_navigation_bar.dart';
 import 'package:ecommericeapp/controllers/onboardingcontroller.dart';
 import 'package:ecommericeapp/utils/constants/Tcolors.dart';
 import 'package:ecommericeapp/utils/constants/Tsize.dart';
@@ -51,7 +52,7 @@ class iconsbutton extends StatelessWidget {
     return Positioned(
 
         right: Tsize.defaultspace,bottom: Tdevices.getbottomnavigationbarheight(),child:IconButton(onPressed: (){
-          onboradingcontroller.instance.nextpage();
+          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BottomNav()));
 
     },style:IconButton.styleFrom(shape:CircleBorder(),backgroundColor:dark?Tcolors.background_primary:Colors.black ), icon: Icon(Icons.arrow_forward_ios_sharp,color:dark?Colors.black:Tcolors.background_primary,)));
   }

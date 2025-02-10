@@ -96,7 +96,7 @@ class _ShopScreenState extends State<ShopScreen> with SingleTickerProviderStateM
           ];
         },
         body: FutureBuilder<List<Map<String, dynamic>>>(
-          future: futureProducts,
+          future: null,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Center(child: CircularProgressIndicator());

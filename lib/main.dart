@@ -1,3 +1,6 @@
+
+
+
 import 'package:ecommericeapp/features/push_notification/pushnotification_api.dart';
 import 'package:ecommericeapp/startscreen.dart';
 import 'package:ecommericeapp/utils/theme/Light_and_dark_theme.dart';
@@ -17,27 +20,16 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  await NotificationService.initialize();
-
+  await Localnotification.initNotification();
+  await Localnotification.requestPermission();
   // Local Notifications Initialization
   runApp(GetMaterialApp(
-        debugShowCheckedModeBanner: false,
-        themeMode: ThemeMode.system,
-        theme: light_dark_theme.lighttheme,
-        darkTheme: light_dark_theme.darktheme,
-        home: startscreen(),
-      )
+    debugShowCheckedModeBanner: false,
+    themeMode: ThemeMode.system,
+    theme: light_dark_theme.lighttheme,
+    darkTheme: light_dark_theme.darktheme,
+    home: startscreen(),
+  )
   );
 }
-
-
-
-
-
-
-
-
-
-
-
 
